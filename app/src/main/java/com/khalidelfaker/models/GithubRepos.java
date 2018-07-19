@@ -1,13 +1,14 @@
-
 package com.khalidelfaker.models;
 
-import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class GithubRepos {
+import java.util.ArrayList;
+import java.util.List;
 
+public class GithubRepos {
     @SerializedName("total_count")
     @Expose
     private long totalCount;
@@ -17,6 +18,9 @@ public class GithubRepos {
     @SerializedName("items")
     @Expose
     private List<Item> items = null;
+    public GithubRepos() {
+        setItems(new ArrayList<Item>());
+    }
 
     public long getTotalCount() {
         return totalCount;
@@ -47,4 +51,8 @@ public class GithubRepos {
         return new ToStringBuilder(this).append("totalCount", totalCount).append("incompleteResults", incompleteResults).append("items", items).toString();
     }
 
+    public void reset() {
+        totalCount = 0;
+        items.clear();
+    }
 }
