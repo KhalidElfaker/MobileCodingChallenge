@@ -1,5 +1,5 @@
 # MobileCodingChallenge 
- this is a small app that list the most starred Github repos that were created in the last 30 days.
+ this is a small Android App that list the most starred Github repos that were created in the last 30 days.
 
 ## Pre-requisites
 
@@ -14,6 +14,9 @@ Clone this repository and import into **Android Studio**
 git clone git@github.com:KhalidElfaker/MobileCodingChallenge.git
 ```
 
+## Used Technologies
+
+- Android / Java
 
 ## Getting Started
 
