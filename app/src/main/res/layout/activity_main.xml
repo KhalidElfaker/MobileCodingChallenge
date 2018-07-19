@@ -1,75 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:id="@+id/parentPanel">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="3"
-        android:gravity="center"
-        android:background="#21506b">
-        <ProgressBar
-            android:id="@+id/activity_main_progress_bar"
-            android:layout_width="50dip"
-            android:layout_height="50dip"
-            android:visibility="gone"/>
-
-    </LinearLayout>
 
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#d5d5d5"
+        android:layout_alignParentTop="true"
+        android:background="#e0e0e0"
         android:gravity="center"
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
-        android:text="Trending Repos"
+        android:text="@string/title"
         android:textAlignment="center"
-        android:textColor="@android:color/black"
 
+        android:textColor="@android:color/black"
         android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/navigation"
+        android:background="@android:color/transparent"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/activity_main_progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:clickable="false"
+            android:visibility="gone" />
+
+    </LinearLayout>
 
     <ListView
         android:id="@+id/my_list_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/navigation"
-        android:layout_below="@id/title" />
+        android:layout_below="@id/title"
+        android:scrollbars="none" />
 
     <LinearLayout
+        android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:id="@+id/navigation">
+        android:background="#e0e0e0"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="5dp">
 
-        <TextView
+        <Button
+            android:id="@+id/trendingButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#FFD5D5D5"
-            android:gravity="center"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:text="Hello World!"
-            android:textColor="#000" />
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/ic_baseline_star_rate_18px"
+            android:text="@string/tranding"
+            android:textAllCaps="false"
+            android:textStyle="bold" />
 
-        <TextView
+        <Button
+            android:id="@+id/settingButton"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#FFD5D5D5"
-            android:gravity="center"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:text="Hello World!"
-            android:textColor="#000" />
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/ic_baseline_settings_20px"
+            android:text="@string/settings"
+            android:textAllCaps="false" />
+
     </LinearLayout>
-
-
 </RelativeLayout>

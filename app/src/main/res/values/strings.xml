@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Mobile Coding Challenge</string>
     <string name="rating">rating</string>
+    <string name="title">Trending Repos</string>
+    <string name="tranding">Tranding</string>
+    <string name="settings">Settings</string>
 </resources>
