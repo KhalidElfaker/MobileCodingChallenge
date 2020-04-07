@@ -30,14 +30,13 @@ if you want to run the App run on a real device or an emulator you can do as men
 ## Maintainers
 
 This project is mantained by:
-* [Khalid Elfaker](https://github.com/KhalidElfaker)
-
+* [Github: Khalid Elfaker](https://github.com/KhalidElfaker)
+* [Linkedin: Khalid Elfaker](https://www.linkedin.com/in/khalid-elfaker/)
 
 ## Contributing
 
 1. Fork it
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -m 'Add some feature')
-4. Run the linter (ruby lint.rb').
-5. Push your branch (git push origin my-new-feature)
-6. Create a new Pull Request
+4. Push your branch (git push origin my-new-feature)
+5. Create a new Pull Request
